@@ -1,0 +1,26 @@
+{
+  "name": "learning-beanstalk-nodejs",
+  "version": "1.0.0",
+  "description": "Learning Beanstalk using Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryabawanta/learning-beanstalk-nodejs.git"
+  },
+  "keywords": [
+    "beanstalkd"
+  ],
+  "author": "Arya Bawanta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aryabawanta/learning-beanstalk-nodejs/issues"
+  },
+  "homepage": "https://github.com/aryabawanta/learning-beanstalk-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodestalker": "^0.1.21"
+  }
+}
