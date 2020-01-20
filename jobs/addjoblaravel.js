@@ -3,28 +3,8 @@ var bs = require('nodestalker'),
 
 client.use('default').onSuccess(function (data) {
     console.log(data);
-    //     var laraveljob = {
-    //         "displayName": "App\\\\Jobs\\\\FindFavoriteOS",
-    //         "job": "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
-    //         "maxTries": null,
-    //         "delay": null,
-    //         "timeout": null,
-    //         "timeoutAt": null,
-    //         "data": {
-    //             "commandName": "App\\\\Jobs\\\\FindFavoriteOS",
-    //             "command": "O:23:\\"App\\\\Jobs\\\\FindFavoriteOS\\":8:{
-    //                 s: 6: \\"\\u0000*\\u0000job\\"; N;
-    //             s: 10: \\"connection\\"; N;
-    //             s: 5: \\"queue\\"; N;
-    //             s: 15: \\"chainConnection\\"; N;
-    //             s: 10: \\"chainQueue\\"; N;
-    //             s: 5: \\"delay\\"; N;
-    //             s: 10: \\"middleware\\"; a: 0:{ }
-    //     s: 7: \\"chained\\"; a: 0: { }
-    // }"
-    //         }
-    //     };
-    var serialize, Class, command, serialized;
+
+    var serialize, Class, command;
 
     serialize = require('php-serialization').serialize;
     Class = require('php-serialization').Class;
