@@ -29,7 +29,7 @@ client.use('default').onSuccess(function (data) {
     serialize = require('php-serialization').serialize;
     Class = require('php-serialization').Class;
 
-    command = new Class("App\\Jobs\\FindFavoriteOS");
+    command = new Class("App\\Jobs\\Node");
 
     command.__addAttr__("job", "string", null, "null", "protected");
     command.__addAttr__("queue", "string", null, "null");
@@ -40,14 +40,14 @@ client.use('default').onSuccess(function (data) {
     command = serialize(command, "object");
 
     var payload = JSON.stringify({
-        displayName: "App\\\\Jobs\\\\FindFavoriteOS",
+        displayName: "App\\\\Jobs\\\\Node",
         job: "App\\\\Jobs\\\\FindFavoriteOS@handler",
         maxTries: null,
         delay: null,
         timeout: null,
         timeoutAt: null,
         data: {
-            commandName: "App\\\\Jobs\\\\FindFavoriteOS",
+            commandName: "App\\\\Jobs\\\\Node",
             command
         }
     });
