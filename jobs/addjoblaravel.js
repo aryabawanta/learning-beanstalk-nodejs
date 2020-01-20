@@ -42,14 +42,14 @@ client.use('default').onSuccess(function (data) {
     command = serialize(command, "object");
 
     var payload = JSON.stringify({
-        displayName: "App\\\\Jobs\\\\FindFavoriteOS",
-        job: "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
+        displayName: "App\\Jobs\\FindFavoriteOS",
+        job: "Illuminate\\Queue\\CallQueuedHandler@call",
         maxTries: null,
         delay: null,
         timeout: null,
         timeoutAt: null,
         data: {
-            commandName: "App\\\\Jobs\\\\FindFavoriteOS",
+            commandName: "App\\Jobs\\FindFavoriteOS",
             command
         }
     });
