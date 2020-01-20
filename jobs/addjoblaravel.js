@@ -31,13 +31,13 @@ client.use('default').onSuccess(function (data) {
 
     command = new Class("App\\Jobs\\FindFavoriteOS");
 
-    command.__addAttr__("job", "string", null, "null", "protected");
+    command.__addAttr__("job", "string", null, "null");
     command.__addAttr__("queue", "string", null, "null");
     command.__addAttr__("chainConnection", "string", null, "null");
     command.__addAttr__("chainQueue", "string", null, "null");
     command.__addAttr__("delay", "string", null, "null");
-    command.__addAttr__("middleware", "string", new Class(), "object");
-    command.__addAttr__("chained", "string", new Class(), "object");
+    command.__addAttr__("middleware", "string", new Class(), "object", "public");
+    command.__addAttr__("chained", "string", new Class(), "object", "public");
 
     command = serialize(command, "object");
 
