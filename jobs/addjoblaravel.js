@@ -41,7 +41,7 @@ client.use('default').onSuccess(function (data) {
 
     var payload = JSON.stringify({
         displayName: "App\\\\Jobs\\\\FindFavoriteOS",
-        job: "App\\\\Jobs\\\\Node@handler",
+        job: "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
         maxTries: null,
         delay: null,
         timeout: null,
