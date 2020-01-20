@@ -39,7 +39,7 @@ client.use('default').onSuccess(function (data) {
     command.__addAttr__("middleware", "string", {}, "object");
     command.__addAttr__("chained", "string", {}, "object");
 
-    serialized = serialize(command, "object");
+    command = serialize(command, "object");
 
     var payload = JSON.stringify({
         displayName: "App\\\\Jobs\\\\FindFavoriteOS",
@@ -50,7 +50,7 @@ client.use('default').onSuccess(function (data) {
         timeoutAt: null,
         data: {
             commandName: "App\\\\Jobs\\\\FindFavoriteOS",
-            command: serialized
+            command
         }
     });
     console.log(payload);
