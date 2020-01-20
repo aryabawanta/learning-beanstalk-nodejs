@@ -3,10 +3,10 @@ var bs = require('nodestalker'),
 
 client.use('default').onSuccess(function (data) {
     console.log(data);
-    var payload = new Buffer([{
+    var payload = JSON.stringify({
         job: 'App\\Jobs\\Node@handle',
         data: "Ubuntu"
-    }]);
+    });
     client.put(payload).onSuccess(function (data) {
         console.log(data);
         client.disconnect();
