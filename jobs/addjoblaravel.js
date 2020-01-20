@@ -5,7 +5,7 @@ client.use('default').onSuccess(function (data) {
     console.log(data);
     var payload = JSON.stringify({
         "displayName": "App\\\\Jobs\\\\Node",
-        "job": "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
+        "job": "App\\\\Jobs\\\\Node@handle",
         data: {
             "commandName": "App\\\\Jobs\\\\Node",
         }
