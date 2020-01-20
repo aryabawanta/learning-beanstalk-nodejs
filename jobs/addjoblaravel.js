@@ -31,13 +31,13 @@ client.use('default').onSuccess(function (data) {
 
     command = new Class("App\\Jobs\\FindFavoriteOS");
 
-    // command_detail = new Class();
-    // command_detail.__addAttr__("testkey", "string", "testval", "string");
-    // command_detail.__addAttr__("timestamp", "string", "2017-02-24 11:07:48", "string");
-    // command_detail.__addAttr__("event", "string", "notification", "string");
-    // command_detail.__addAttr__("class", "string", "App\\Events\\NotificationEvent", "string");
-
-    // command.__addAttr__("data", "string", command_detail, "array", "public");
+    command.__addAttr__("job", "string", null, "null", "protected");
+    command.__addAttr__("queue", "string", null, "null");
+    command.__addAttr__("chainConnection", "string", null, "null");
+    command.__addAttr__("chainQueue", "string", null, "null");
+    command.__addAttr__("delay", "string", null, "null");
+    command.__addAttr__("middleware", "string", {}, "object");
+    command.__addAttr__("chained", "string", {}, "object");
 
     serialized = serialize(command, "object");
 
