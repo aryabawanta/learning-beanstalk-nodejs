@@ -24,7 +24,7 @@ client.use('default').onSuccess(function (data) {
     // }"
     //         }
     //     };
-    var serialize, Class, command, command_detail, serialized;
+    var serialize, Class, command, serialized;
 
     serialize = require('php-serialization').serialize;
     Class = require('php-serialization').Class;
