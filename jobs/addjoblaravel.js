@@ -24,7 +24,7 @@ client.use('default').onSuccess(function (data) {
     // }"
     //         }
     //     };
-    var serialize, Class, command, command_detail, serialized, result;
+    var serialize, Class, command, command_detail, serialized;
 
     serialize = require('php-serialization').serialize;
     Class = require('php-serialization').Class;
@@ -41,14 +41,14 @@ client.use('default').onSuccess(function (data) {
 
     serialized = serialize(command, "object");
 
-    result = {
+    var payload = JSON.stringify({
         displayName: "App\\\\Jobs\\\\FindFavoriteOS",
         job: "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
         data: {
             commandName: "App\\\\Jobs\\\\FindFavoriteOS",
             command: serialized
         }
-    };
+    });
     client.put(payload).onSuccess(function (data) {
         console.log(data);
         client.disconnect();
