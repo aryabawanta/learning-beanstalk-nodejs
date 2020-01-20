@@ -36,6 +36,8 @@ client.use('default').onSuccess(function (data) {
     command.__addAttr__("chainConnection", "string", null, "null");
     command.__addAttr__("chainQueue", "string", null, "null");
     command.__addAttr__("delay", "string", null, "null");
+    command.__addAttr__("middleware", "string", null, "object");
+    command.__addAttr__("chained", "string", null, "object");
 
     command = serialize(command, "object");
 
