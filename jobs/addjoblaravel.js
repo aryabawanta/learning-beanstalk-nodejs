@@ -44,11 +44,16 @@ client.use('default').onSuccess(function (data) {
     var payload = JSON.stringify({
         displayName: "App\\\\Jobs\\\\FindFavoriteOS",
         job: "Illuminate\\\\Queue\\\\CallQueuedHandler@call",
+        maxTries: null,
+        delay: null,
+        timeout: null,
+        timeoutAt: null,
         data: {
             commandName: "App\\\\Jobs\\\\FindFavoriteOS",
             command: serialized
         }
     });
+    console.log(payload);
     client.put(payload).onSuccess(function (data) {
         console.log(data);
         client.disconnect();
