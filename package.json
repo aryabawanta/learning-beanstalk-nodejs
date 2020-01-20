@@ -21,6 +21,7 @@
   "homepage": "https://github.com/aryabawanta/learning-beanstalk-nodejs#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodestalker": "^0.1.21"
+    "nodestalker": "^0.1.21",
+    "php-serialization": "0.0.4"
   }
 }
